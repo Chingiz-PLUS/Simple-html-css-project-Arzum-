@@ -1,0 +1,138 @@
+main {
+  background-color: $primaryBckColor;
+  padding: 25px 0px 75px 0px;
+  .container {
+    padding-top: 60px;
+  }
+}
+.my-profile {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 24px 0;
+  margin-bottom: 24px;
+  overflow: hidden;
+  cursor: pointer;
+  height: 75px;
+  transition: 0.4s all;
+  svg {
+    transform: rotate(0deg);
+    transition: 0.4s all;
+  }
+  &.open {
+    height: 421.85px;
+    svg {
+      transform: rotate(180deg);
+      transition: 0.4s all;
+    }
+  }
+  h4 {
+    padding: 0 24px;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  ul {
+    li {
+      cursor: pointer;
+      padding: 10px 24px;
+      color: $primaryColor;
+      position: relative;
+      span {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 2px;
+        background-color: $warningColor;
+        display: none;
+      }
+    }
+    .active {
+      color: $warningColor;
+      span {
+        position: absolute;
+        height: 100%;
+        width: 2px;
+        background-color: $warningColor;
+        display: block;
+      }
+    }
+  }
+}
+.my-orders {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 24px 0;
+  h4 {
+    margin: 0;
+  }
+  .orders-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    .order-card {
+      padding: 24px;
+      border-radius: 8px;
+      background-color: #ffffff;
+      .name {
+        color: $secondaryGray;
+        font-size: 14px;
+        margin-bottom: 2px;
+      }
+      .pointer {
+        color: $primaryColor;
+      }
+      .pointer-green {
+        color: $warningGreen;
+      }
+      .pointer-price {
+        color: $warningColor;
+      }
+      .pointer-warning {
+        color: #eb5757;
+      }
+      a {
+        margin-top: 25px;
+        padding: 11px 0;
+        border-radius: 4px;
+        text-align: center;
+        color: $primaryColor;
+        display: block;
+        background-color: $primaryBckColor;
+        box-shadow: 0;
+        transition: 0.3s;
+        &:hover {
+          box-shadow: 5px 5px 20px;
+          transition: 0.3s;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  main {
+    padding-top: 128px;
+    .container{
+        padding-top: 30px;
+    }
+  }
+  .my-profile{
+      cursor: text;
+      height: auto;
+      overflow: visible;
+      svg{
+          display: none;
+      }
+  }
+  .md-row {
+    height: 100%;
+  }
+  .md-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,167 @@
+main {
+  background-color: $primaryBckColor;
+  height: 100vh;
+  transition: 1s;
+}
+main.small {
+  .sign-section{
+    padding-top: 114px;
+    transition: 1s;
+  }
+}
+main {
+  .sign-section {
+    padding-top: 60px;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 5fr;
+  }
+  .sign-select {
+    padding: 16px 12px;
+    display: flex;
+    .selector {
+      color: $primaryColor;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 10px 0px;
+      width: 50%;
+      border-bottom: 2px solid $warningColorGray;
+    }
+    .selector.active {
+      color: $warningColor;
+      border-bottom: 3px solid $warningColor;
+    }
+  }
+  .sign-in {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+    color: $primaryColor;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 30px 30px 50px 30px;
+    h4 {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 24px;
+      text-align: center;
+    }
+    .authorization {
+      display: flex;
+      gap: 10%;
+      .auth-btn {
+        width: 45%;
+        font-size: 14px;
+        padding: 14px 16px;
+        color: #ffffff;
+        border-radius: 8px;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        top: 0px;
+        transition: 1s all;
+        &:hover{
+          position: relative;
+          top: -5px;
+          transition: 1s all;
+        }
+      }
+      .auth-btn.fb {
+        background-color: #3b5797;
+      }
+      .auth-btn.google {
+        background-color: #dd4d39;
+      }
+    }
+    p {
+      color: $secondaryGray;
+      text-align: center;
+      margin: 0;
+    }
+    .signin-inputs {
+      
+      label {
+        cursor: pointer;
+        display: block;
+      }
+      input {
+        width: 100%;
+        border-radius: 8px;
+        border: none;
+        background-color: $inputGray;
+        padding: 13px 20px;
+      }
+      input#email{
+          margin-bottom: 20px;
+      }
+      input#psw{
+        padding-right: 60px;
+      }
+      ::placeholder {
+        opacity: 0.7;
+        color: $secondaryGray;
+      }
+      .pass-box{
+        position: relative;
+        #togglePassword{
+          cursor: pointer;
+          font-size: 20px;
+          position: absolute;
+          transform: translate(50%,-50%);
+          top: 50%;
+          right: 30px;
+        }
+      }
+    }
+    .forget-psw{
+        margin-top: 5px;
+        display: flex;
+        justify-content: flex-end; 
+        margin-bottom: 15px;
+
+    }
+    
+    .signin-btn{
+        text-align: center;
+        display: block;
+        color: #ffffff;
+        background-color: $primaryColor!important;
+        padding: 16px 0;
+        border-radius: 8px;
+        margin-bottom: 10px;
+    }
+  }
+}
+
+@media (min-width: 992px){
+    main{
+        height: auto;
+        display: flex;
+        justify-content: center;
+        .sign-select{
+          .selector{
+            padding: 20px 0;
+          }
+        }
+        .sign-section{
+          display: inline-block;
+            padding-top: 192px;
+            padding-bottom: 192px;
+            width: 384px;
+        }
+        .sign-in{
+          gap: 16px;
+          padding-bottom: 30px;
+          .signin-inputs{
+            gap: 45px;
+          }
+        }
+    }
+    
+}

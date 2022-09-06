@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      href="http://fonts.cdnfonts.com/css/euclid-circular-a"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/cd53e7c5f6.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../css/sign-in.css" />
+    <title>Sign in</title>
+  </head>
+  <body>
+    <div class="bck-opacity" id="bck-opacity"></div>
+    <header>
+      <div class="top-header">
+        <div class="container">
+          <a href="product.html">
+            <img src="../img/logo-desktop.png" alt="" />
+          </a>
+
+          <div class="search-all">
+            <input type="text" placeholder="Məhsul axtarın" />
+            <svg
+              class="srch-icon"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.20005 13.6C10.7347 13.6 13.6 10.7346 13.6 7.2C13.6 3.66538 10.7347 0.800003 7.20005 0.800003C3.66543 0.800003 0.800049 3.66538 0.800049 7.2C0.800049 10.7346 3.66543 13.6 7.20005 13.6Z"
+                stroke="#4F4F4F"
+                stroke-width="1.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M15.2 15.2L11.72 11.72"
+                stroke="#4F4F4F"
+                stroke-width="1.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <div class="lng-selector" id="lng-selector">
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 22 22"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11 20.375C16.1777 20.375 20.375 16.1777 20.375 11C20.375 5.82233 16.1777 1.625 11 1.625C5.82233 1.625 1.625 5.82233 1.625 11C1.625 16.1777 5.82233 20.375 11 20.375Z"
+                  stroke="#828282"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M2.25 7.875H19.75"
+                  stroke="#828282"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M2.25 14.125H19.75"
+                  stroke="#828282"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10.4791 1.625C8.72429 4.4371 7.79395 7.68528 7.79395 11C7.79395 14.3147 8.72429 17.5629 10.4791 20.375"
+                  stroke="#828282"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M11.5208 1.625C13.2756 4.4371 14.206 7.68528 14.206 11C14.206 14.3147 13.2756 17.5629 11.5208 20.375"
+                  stroke="#828282"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <p>Az</p>
+              <ul class="languages" id="lngs">
+                <li><a href="" class="active">Az</a></li>
+                <li><a href="">En</a></li>
+                <li><a href="">Ru</a></li>
+              </ul>
+              <svg
+                width="12"
+                height="7"
+                viewBox="0 0 12 7"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0.857178 0.875L6.00003 6.125L11.1429 0.875"
+                  stroke="#1D2123"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <ul class="shortcuts">
+            <li class="d-flex align-items-center">
+              <a href="profile-orders.html">
+                <svg
+                  width="18"
+                  height="20"
+                  viewBox="0 0 18 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17 19V17C17 15.9391 16.5786 14.9217 15.8284 14.1716C15.0783 13.4214 14.0609 13 13 13H5C3.93913 13 2.92172 13.4214 2.17157 14.1716C1.42143 14.9217 1 15.9391 1 17V19"
+                    stroke="#1D2123"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M9 9C11.2091 9 13 7.20914 13 5C13 2.79086 11.2091 1 9 1C6.79086 1 5 2.79086 5 5C5 7.20914 6.79086 9 9 9Z"
+                    stroke="#1D2123"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li class="d-flex align-items-center">
+              <a href="">
+                <svg
+                  width="20"
+                  height="17"
+                  viewBox="0 0 20 17"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17.397 2.20108C16.972 1.77226 16.4675 1.43208 15.9121 1.2C15.3568 0.967906 14.7616 0.84845 14.1605 0.84845C13.5594 0.84845 12.9642 0.967906 12.4088 1.2C11.8535 1.43208 11.349 1.77226 10.924 2.20108L10.0421 3.09062L9.16019 2.20108C8.30183 1.33529 7.13764 0.848898 5.92373 0.848898C4.70982 0.848898 3.54563 1.33529 2.68727 2.20108C1.8289 3.06687 1.34668 4.24113 1.34668 5.46554C1.34668 6.68995 1.8289 7.86421 2.68727 8.72999L3.56918 9.61954L10.0421 16.1485L16.515 9.61954L17.397 8.72999C17.8221 8.30137 18.1594 7.79246 18.3895 7.23233C18.6196 6.67221 18.738 6.07184 18.738 5.46554C18.738 4.85923 18.6196 4.25887 18.3895 3.69874C18.1594 3.13861 17.8221 2.6297 17.397 2.20108V2.20108Z"
+                    stroke="#1D2123"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li class="d-flex align-items-center">
+              <a href="">
+                <svg
+                  width="18"
+                  height="20"
+                  viewBox="0 0 18 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M3.5999 0.909092L0.899902 4.54546V17.2727C0.899902 17.7549 1.08954 18.2174 1.42711 18.5584C1.76468 18.8994 2.22251 19.0909 2.6999 19.0909H15.2999C15.7773 19.0909 16.2351 18.8994 16.5727 18.5584C16.9103 18.2174 17.0999 17.7549 17.0999 17.2727V4.54546L14.3999 0.909092H3.5999Z"
+                    stroke="#1D2123"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M0.899902 4.54546H17.0999"
+                    stroke="#1D2123"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M12.5999 8.18182C12.5999 9.14624 12.2206 10.0712 11.5455 10.7531C10.8704 11.4351 9.95468 11.8182 8.9999 11.8182C8.04512 11.8182 7.12945 11.4351 6.45432 10.7531C5.77919 10.0712 5.3999 9.14624 5.3999 8.18182"
+                    stroke="#1D2123"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+              <a href="" class="prdct-count">0</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="bottom-header">
+        <nav id="nav">
+          <div class="top-nav">
+            <img src="../SVG/Logo2.png" alt="" />
+            <img src="../SVG/close.png" alt="" id="nav-close" />
+          </div>
+          <div class="container">
+            <ul class="navbar-ul">
+              <li class="drop-list">
+                <a href="#" onclick="return false"
+                  >yeni
+                  <svg
+                    width="7"
+                    height="14"
+                    viewBox="0 0 7 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0.875 13L6.125 7L0.874999 1"
+                      stroke="#FFFFFF"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </a>
+                <div class="drop-box">
+                  <div class="row">
+                    <div class="col-12 col-md-9">
+                      <div class="categories">
+                        <div class="row">
+                          <div class="col-12 col-md-4">
+                            <ul>
+                              <li class="ctg-name">Başlıq</li>
+                              <li><a href="">Alt başlıq</a></li>
+                              <li><a href="">Alt başlıq</a></li>
+                              <li><a href="">Alt başlıq</a></li>
+                              <li><a href="">Alt başlıq</a></li>
+                            </ul>
+                          </div>
+                          <div class="col-12 col-md-4">
+                            <ul>
+                              <li class="ctg-name">Başlıq</li>
+                              <li><a href="">Alt başlıq</a></li>
+                              <li><a href="">Alt başlıq</a></li>
+                              <li><a href="">Alt başlıq</a></li>
+                              <li><a href="">Alt başlıq</a></li>
+                            </ul>
+                          </div>
+                          <div class="col-12 col-md-4">
+                            <ul>
+                              <li class="ctg-name">Başlıq</li>
+                              <li><a href="">Alt başlıq</a></li>
+                              <li><a href="">Alt başlıq</a></li>
+                              <li><a href="">Alt başlıq</a></li>
+                              <li><a href="">Alt başlıq</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-none col-md-3"></div>
+                  </div>
+                </div>
+              </li>
+              <li><a href="#">brendlər</a></li>
+              <li>
+                <a href="#"
+                  >endirimlər
+                  <svg
+                    width="7"
+                    height="14"
+                    viewBox="0 0 7 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0.875 13L6.125 7L0.874999 1"
+                      stroke="#FFFFFF"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"/>
+                      </svg>
+                    </a>
+              </li>
+              <li>
+                <a href=""
+                  >makiyaj
+                  <svg
+                    width="7"
+                    height="14"
+                    viewBox="0 0 7 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0.875 13L6.125 7L0.874999 1"
+                      stroke="#FFFFFF"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"/></svg></a>
+              </li>
+              <li>
+                <a href="#"
+                  >üz
+                  <svg
+                    width="7"
+                    height="14"
+                    viewBox="0 0 7 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0.875 13L6.125 7L0.874999 1"
+                      stroke="#FFFFFF"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"/></svg></a>
+              </li>
+              <li><a href="#">saç</a></li>
+              <li>
+                <a href="#"
+                  >bədən
+                  <svg
+                    width="7"
+                    height="14"
+                    viewBox="0 0 7 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0.875 13L6.125 7L0.874999 1"
+                      stroke="#FFFFFF"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"/></svg></a>
+              </li>
+              <li><a href="#">k-beauty</a></li>
+              <li><a href="#">fırçalar və aksessuarlar</a></li>
+              <li><a href="#">hədiyyəlik dəstlər</a></li>
+            </ul>
+          </div>
+          <div class="bottom-nav">
+            <ul class="languages">
+              <li class="active-lang">az</li>
+              <li>ru</li>
+              <li>en</li>
+            </ul>
+            <ul class="sign">
+              <li><a href="" class="sign-first">Daxil ol</a></li>
+              <li><a href="">Qeydiyyat</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div class="container">
+          <div class="mobile-header">
+            <div class="top-mobile-header">
+              <div class="main-side">
+                <div class="hamburger-menu" id="hamburger-menu">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <div class="logo-div">
+                  <a href="product.html"
+                    ><img src="../SVG/Logo1.svg" alt=""
+                  /></a>
+                </div>
+              </div>
+              <div class="icon-side">
+                <img src="../SVG/search.png" alt="" id="search-btn" />
+                <a href="profile-orders.html"
+                  ><img src="../SVG/user.png" alt=""
+                /></a>
+                <a href=""><img src="../SVG/heart.png" alt="" /></a>
+                <a href="" class="basket"
+                  ><img src="../SVG/bag.png" alt="" /><span>20</span></a
+                >
+              </div>
+            </div>
+            <div class="extra-mobile-header">
+              <div class="search-input" id="search-input">
+                <input type="text" name="" id="search-all" />
+                <img src="../SVG/search-input.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <div class="sign-section">
+        <div class="sign-select">
+          <div class="selector active">Daxil ol</div>
+          <div class="selector">Qeydiyyat</div>
+        </div>
+        <div class="sign-in">
+          <h4>Daxil ol</h4>
+          <div class="authorization">
+            <a href="" class="auth-btn fb"
+              ><svg
+                width="10"
+                height="20"
+                viewBox="0 0 10 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_469_7994)">
+                  <path
+                    d="M6.4908 19.9972V10.8764H9.43911L9.88051 7.32183H6.4908V5.05236C6.4908 4.02325 6.76604 3.32187 8.18733 3.32187L10 3.321V0.141864C9.68636 0.098703 8.61042 0.00195312 7.35864 0.00195312C4.74517 0.00195312 2.95593 1.65839 2.95593 4.7005V7.32192H0V10.8765H2.95584V19.9973L6.4908 19.9972Z"
+                    fill="white"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_469_7994">
+                    <rect width="10" height="20" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+              Facebook ilə</a
+            >
+            <a href="" class="auth-btn google"
+              ><svg
+                width="19"
+                height="20"
+                viewBox="0 0 19 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_469_8001)">
+                  <path
+                    d="M18.9902 10.1871C18.9902 9.36767 18.9255 8.76973 18.7856 8.14966H9.68945V11.848H15.0287C14.9211 12.7671 14.3398 14.1512 13.048 15.0813L13.0299 15.2051L15.906 17.4969L16.1052 17.5174C17.9352 15.7789 18.9902 13.221 18.9902 10.1871Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M9.69003 19.9313C12.3058 19.9313 14.5018 19.0454 16.1058 17.5174L13.0486 15.0813C12.2305 15.6682 11.1325 16.0779 9.69003 16.0779C7.12804 16.0779 4.95358 14.3395 4.17844 11.9366L4.06483 11.9466L1.07427 14.3273L1.03516 14.4391C2.62832 17.6945 5.90081 19.9313 9.69003 19.9313Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M4.17863 11.9366C3.9741 11.3165 3.85573 10.6521 3.85573 9.96559C3.85573 9.27903 3.9741 8.61468 4.16787 7.9946L4.16245 7.86254L1.13441 5.4436L1.03534 5.49208C0.378723 6.84299 0.00195312 8.36002 0.00195312 9.96559C0.00195312 11.5712 0.378723 13.0881 1.03534 14.439L4.17863 11.9366Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M9.69003 3.85336C11.5092 3.85336 12.7364 4.66168 13.4361 5.33717L16.1704 2.59107C14.4911 0.985496 12.3058 0 9.69003 0C5.90081 0 2.62832 2.23672 1.03516 5.49214L4.16768 7.99466C4.95358 5.59183 7.12804 3.85336 9.69003 3.85336Z"
+                    fill="white"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_469_8001">
+                    <rect width="19" height="20" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+              Google ilə</a
+            >
+          </div>
+          <p>və ya</p>
+          <form action="" class="signin-inputs d-flex flex-column">
+            <div class="inputs-section">
+              <label for="email">Email</label>
+              <input
+                type="text"
+                id="email"
+                placeholder="Emailinizi daxil edin"
+              />
+              <label for="psw">Şifrə</label>
+              <div class="pass-box">
+                <input
+                  type="password"
+                  id="psw"
+                  placeholder="Şifrənizi daxil edin"
+                />
+                <i class="far fa-eye" id="togglePassword"></i>
+              </div>
+              <div class="forget-psw">
+                <a href="">Şifrəni unutdum</a>
+              </div>
+            </div>
+            <input type="submit" value="Daxil ol" class="signin-btn" />
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Bootstrap js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <!-- END Bootstrap js -->
+    <script src="../js/main.js"></script>
+    <script>
+      const togglePassword = document.querySelector("#togglePassword");
+      const password = document.querySelector("#psw");
+      togglePassword.addEventListener("click", function (e) {
+        const type =
+          password.getAttribute("type") === "password" ? "text" : "password";
+        password.setAttribute("type", type);
+        this.classList.toggle("fa-eye-slash");
+      });
+    </script>
+  </body>
+</html>
